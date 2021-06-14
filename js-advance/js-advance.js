@@ -62,3 +62,15 @@ function moveCommand(direction) {
     }
     return whatHappens;
 }
+
+//ES5(EcmaScript 5) and ES6(EcmaScript 6) // BABEL test
+
+//let + const
+const player = 'joginder';
+let experience = '100';
+let wizardLevel = false;
+if (experience > 90) {
+    let wizardLevel = true;
+    console.log('inside ', wizardLevel);
+}
+console.log('outside', wizardLevel);

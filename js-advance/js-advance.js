@@ -27,4 +27,38 @@ console.log('window', fun);
 funFunction();
 funerFunction();
 funestFunction();
-console.log(fun);
+console.log(fun); //Advance Control flow
+
+//javascripts conditionals
+//ternary operator
+//condition ?expre1 : expre2
+
+function isUserValid(bool) {
+    return bool;
+}
+var answer = isUserValid(true) ? "you may enter" : "Access Denied"; //you may enter if false Access denied
+var automatedAnswer = "your account is " + (isUserValid(false) ? "123" : "not available ");
+
+//Switch statement 
+
+function moveCommand(direction) {
+    var whatHappens;
+    switch (direction) {
+        case "forward":
+            whatHappens = "you encounter a monster";
+            break;
+        case "back":
+            whatHappens = "you arrived home";
+            break;
+        case "right":
+            whatHappens = "you found a tree";
+            break;
+        case "left":
+            whatHappens = "you get fired";
+            break;
+        default:
+            whatHappens = "please enter a valid direction";
+
+    }
+    return whatHappens;
+}

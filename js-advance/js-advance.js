@@ -139,3 +139,37 @@ sym2 === sym3 //false
 //     return a + b;
 // }
 const add = (a, b) => a + b; // same thing as above but new way arrow fn
+const first = () => {
+    const greet = 'Hi';
+    const second = () => {
+        alert(greet);
+    }
+    return second;
+}
+const newFunc = first();
+newFunc();
+//closures-a function ran, the function executed.its never going to execute again
+//But its to going to remeber that there are references to those variable
+// so that child scope always has access to the parent scope
+
+
+//currying
+const multiply = (a, b) => a * b;
+const curredMultiple = (a) => (b) => a * b;
+curredMultiple(3)(4); // converting a function that multiple arugments
+const multipleBy5 = curredMultiple(5)
+multipleBy5(5);
+
+//compose -
+
+const compose = (f, g) => (a) => f(g(a));
+
+const sum = (num) => num + 1;
+compose(sum, sum)(5);
+
+//Avoiding side effect , functional purity
+var a = 1;
+
+function b() {
+    a = 2;
+}
